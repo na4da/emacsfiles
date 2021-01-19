@@ -1,5 +1,8 @@
 ;; テーマ
 (require 'darcula-theme)
+(load-theme 'darcula t)
+
+(setq debug-on-error t)
 
 ;; 初期画面止める
 (setq inhibit-startup-message t)
