@@ -47,6 +47,11 @@
 (dolist (repo repositories)
   (add-to-list 'package-archives repo t))
 
+;; (require 'cl) を見逃す
+(setq byte-compile-warnings '(cl-functions))
+
+;; 自動でパッケージを入れる
+(require 'cl)
 (defun auto-install ()
   (dolist (package packages)
     (unless (package-installed-p package)
