@@ -36,7 +36,10 @@
     ansible-vault
     dockerfile-mode
     docker-compose-mode
-    kubernetes))
+    kubernetes
+    rainbow-mode
+    yasnippet
+    ivy))
 
 ;; リポジトリの設定
 (require 'package)
