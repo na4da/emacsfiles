@@ -8,7 +8,6 @@
 (use-package cider
   :defer t
   :init
-  (add-hook 'cider-mode-hook 'clj-refactor-mode)
   (add-hook 'cider-mode-hook 'company-mode)
   (add-hook 'cider-mode-hook 'eldoc-mode)
   (add-hook 'cider-repl-mode-hook 'company-mode)
@@ -23,11 +22,6 @@
         cider-overlays-use-font-lock t
         nrepl-use-ssh-fallback-for-remote-hosts t)
   (cider-repl-toggle-pretty-printing))
-
-(use-package clj-refactor
-  :defer t
-  :diminish clj-refactor-mode
-  :config (cljr-add-keybindings-with-prefix "M-RET"))
 
 (defun cider-connect-from-local-file ()
   (interactive)

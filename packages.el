@@ -16,7 +16,6 @@
     dumb-jump
     clojure-mode
     cider
-    clj-refactor
     ac-cider
     company
     ivy
