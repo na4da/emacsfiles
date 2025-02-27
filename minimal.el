@@ -1,6 +1,17 @@
 ;; テーマ
-(require 'darcula-theme)
-(load-theme 'darcula t)
+
+;; (require 'darcula-theme)
+;; (load-theme 'darcula t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+(load-theme 'solarized t)
+(set-frame-parameter nil 'background-mode 'dark)
+(set-terminal-parameter nil 'background-mode 'dark)
+(enable-theme 'solarized)
+
+(setq debug-on-error t)
+
+;; PATH
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 
 ;; 初期画面止める
 (setq inhibit-startup-message t)
