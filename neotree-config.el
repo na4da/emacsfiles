@@ -28,5 +28,6 @@
   :config
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   (setq neo-smart-open t)
+  (setq neo-show-hidden-files t)
   :bind
   ("C-x C-d" . neotree-project-dir))
