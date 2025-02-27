@@ -68,5 +68,5 @@ tabbar.el v1.7."
   (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
   (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
   :bind
-  ("<C-next>" . tabbar-forward)
-  ("<C-prior>" . tabbar-backward))
+  ("<C-tab>" . tabbar-forward)
+  ("S-<C-tab>" . tabbar-backward))
