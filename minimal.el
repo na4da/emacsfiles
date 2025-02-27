@@ -108,3 +108,8 @@
 ;; Heredocの色
 (custom-set-faces
  '(sh-heredoc ((t (:foreground "khaki")))))
+
+;; 背景透過
+(if window-system
+    (progn
+      (set-frame-parameter nil 'alpha 93)))
