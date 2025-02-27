@@ -63,3 +63,6 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+;; Syntax highlight for SCSS
+(rainbow-mode 1)
