@@ -11,6 +11,9 @@
 ;; browse-url
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "google-chrome-stable")
+(when (eq system-type 'windows-nt)
+  (setq browse-url-browser-function 'browse-url-generic
+        browse-url-generic-program "c:\\\\Program Files (x86)\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe"))
 (global-set-key (kbd "C-c C-c C-p") 'browse-url-of-file)
 
 ;; YAML
@@ -19,6 +22,10 @@
   :defer t
   :mode
   ("\\.yml\\'" . yaml-mode))
+
+(add-hook 'yaml-mode-hook
+  (lambda ()
+    (and (string= (file-name-base) "vault") (ansible-vault-mode 1))))
 
 ;; CSS
 (setq css-indent-offset 2)
@@ -33,6 +40,13 @@
   (setq dumb-jump-mode t
         dumb-jump-selector 'ivy
         dumb-jump-use-visible-window nil))
+
+;; Ivy
+(use-package ivy
+  :ensure t
+  :diminish ivy-mode
+  :config
+  (ivy-mode 1))
 
 ;; LaTeX
 (defun pd ()
